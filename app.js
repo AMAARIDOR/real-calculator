@@ -44,9 +44,8 @@ numberButtons.forEach((numberButton) =>
 
 operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
-    let clickedOperator = event.target.innerHTML;
-    calculatorDisplay.textContent += clickedOperator;
-    operator = clickedOperator;
+    operator = event.target.innerHTML;
+    calculatorDisplay.textContent += operator;
     firstNumber = displayBoard.join("");
     displayBoard = [];
   })
@@ -56,8 +55,11 @@ operatorButtons.forEach((operatorButton) =>
 
 equalButton.addEventListener("click", () => {
   secondNumber = displayBoard.join("");
-  calculatorDisplay.textContent =
-    "=" + calculate(Number(firstNumber), operator, Number(secondNumber));
+  calculatorDisplay.textContent = `= ${calculate(
+    Number(firstNumber),
+    operator,
+    Number(secondNumber)
+  )}`;
 });
 
 // Clear button functionality:
