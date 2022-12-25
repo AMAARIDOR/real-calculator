@@ -8,7 +8,6 @@ let operatorButtons = document.querySelectorAll(".operator-button");
 
 let displayBoard = [];
 let firstNumber, secondNumber;
-let numberIndex = true;
 
 // Click Handling Function for numbers:
 
@@ -22,13 +21,17 @@ let handleNumberClicks = () => {
   );
 };
 
+// Click Handling Function for operators:
+
 let handleOperatorClicks = () => {
   operatorButtons.forEach((operatorButton) =>
     operatorButton.addEventListener("click", (event) => {
-      let clickedOperator = event.target.dataset.operator;
-      console.log(clickedOperator);
+      let clickedOperator = event.target.innerHTML;
+      displayBoard.push(clickedOperator);
+      calculatorDisplay.textContent = displayBoard.join("");
     })
   );
 };
 
 handleNumberClicks();
+handleOperatorClicks();
