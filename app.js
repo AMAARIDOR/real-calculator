@@ -37,10 +37,14 @@ let handleOperatorClicks = () => {
   );
 };
 
+// Equal button functionality:
+
 equalButton.addEventListener("click", () => {
   secondNumber = displayBoard.join("");
   console.log(secondNumber);
 });
+
+// Calling clickHandlers:
 
 handleNumberClicks();
 handleOperatorClicks();
