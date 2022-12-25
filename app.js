@@ -1,8 +1,10 @@
 // Elements Selection for DRY Principle:
 
-let calculatorDisplay = document.getElementById("calculator-display");
-let numberButtons = document.querySelectorAll(".number-button");
-let operatorButtons = document.querySelectorAll(".operator-button");
+const calculatorDisplay = document.getElementById("calculator-display");
+const numberButtons = document.querySelectorAll(".number-button");
+const operatorButtons = document.querySelectorAll(".operator-button");
+const equalButton = document.getElementById("equal-button");
+const clearButton = document.getElementById("clear-button");
 
 // Arrays for number storage:
 
@@ -27,11 +29,18 @@ let handleOperatorClicks = () => {
   operatorButtons.forEach((operatorButton) =>
     operatorButton.addEventListener("click", (event) => {
       let clickedOperator = event.target.innerHTML;
-      displayBoard.push(clickedOperator);
-      calculatorDisplay.textContent = displayBoard.join("");
+      calculatorDisplay.textContent += clickedOperator;
+      firstNumber = displayBoard.join("");
+      console.log(firstNumber);
+      displayBoard = [];
     })
   );
 };
+
+equalButton.addEventListener("click", () => {
+  secondNumber = displayBoard.join("");
+  console.log(secondNumber);
+});
 
 handleNumberClicks();
 handleOperatorClicks();
