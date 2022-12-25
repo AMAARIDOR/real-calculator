@@ -64,7 +64,5 @@ equalButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", () => {
   displayBoard = [];
-  firstNumber = "";
-  secondNumber = "";
-  calculatorDisplay.textContent = "";
+  firstNumber = secondNumber = calculatorDisplay.textContent = "";
 });
