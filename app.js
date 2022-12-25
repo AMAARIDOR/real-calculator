@@ -48,8 +48,6 @@ operatorButtons.forEach((operatorButton) =>
     calculatorDisplay.textContent += clickedOperator;
     operator = clickedOperator;
     firstNumber = displayBoard.join("");
-    console.log(firstNumber);
-    console.log(operator);
     displayBoard = [];
   })
 );
@@ -60,7 +58,6 @@ equalButton.addEventListener("click", () => {
   secondNumber = displayBoard.join("");
   calculatorDisplay.textContent =
     "=" + calculate(Number(firstNumber), operator, Number(secondNumber));
-  console.log(secondNumber);
 });
 
 // Clear button functionality:
