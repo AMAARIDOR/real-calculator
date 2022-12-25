@@ -30,7 +30,7 @@ function calculate(a, op, b) {
 
 numberButtons.forEach((numberButton) =>
   numberButton.addEventListener("click", (event) => {
-    let clickedNumber = event.target.dataset.number;
+    const clickedNumber = event.target.dataset.number;
     displayBoard.push(clickedNumber);
     calculatorDisplay.textContent += clickedNumber;
   })
