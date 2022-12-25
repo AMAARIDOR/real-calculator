@@ -36,7 +36,7 @@ numberButtons.forEach((numberButton) =>
   numberButton.addEventListener("click", (event) => {
     let clickedNumber = event.target.dataset.number;
     displayBoard.push(clickedNumber);
-    calculatorDisplay.textContent = displayBoard.join("");
+    calculatorDisplay.textContent += clickedNumber;
   })
 );
 
