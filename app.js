@@ -41,6 +41,7 @@ numberButtons.forEach((numberButton) =>
 );
 
 // Click Handling Function for operators:
+
 operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
     let clickedOperator = event.target.innerHTML;
@@ -61,6 +62,8 @@ equalButton.addEventListener("click", () => {
     "=" + calculate(Number(firstNumber), operator, Number(secondNumber));
   console.log(secondNumber);
 });
+
+// Clear button functionality:
 
 clearButton.addEventListener("click", () => {
   displayBoard = [];
