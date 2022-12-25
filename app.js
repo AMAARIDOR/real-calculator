@@ -6,10 +6,11 @@ const operatorButtons = document.querySelectorAll(".operator-button");
 const equalButton = document.getElementById("equal-button");
 const clearButton = document.getElementById("clear-button");
 
-// Arrays for number storage:
+// Arrays for number storage and other variables:
 
 let displayBoard = [];
 let firstNumber, operator, secondNumber;
+let locked = false;
 
 // Calculator function:
 
@@ -40,15 +41,17 @@ numberButtons.forEach((numberButton) =>
 
 operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
-    operator = event.target.innerHTML;
-    calculatorDisplay.textContent += operator;
-    firstNumber = displayBoard.join("");
-    displayBoard = [];
+    if (locked === false) {
+      operator = event.target.innerHTML;
+      calculatorDisplay.textContent += operator;
+      firstNumber = displayBoard.join("");
+      displayBoard = [];
+      locked = true;
+    }
   })
 );
 
 // Equal button functionality:
-
 equalButton.addEventListener("click", () => {
   secondNumber = displayBoard.join("");
   calculatorDisplay.textContent = `= ${calculate(
@@ -62,5 +65,6 @@ equalButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", () => {
   displayBoard = [];
+  locked = false;
   firstNumber = secondNumber = calculatorDisplay.textContent = "";
 });
