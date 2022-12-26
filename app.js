@@ -1,5 +1,4 @@
 // Elements Selection for DRY Principle:
-
 const calculatorDisplay = document.getElementById("calculator-display");
 const numberButtons = document.querySelectorAll(".number-button");
 const operatorButtons = document.querySelectorAll(".operator-button");
@@ -7,13 +6,11 @@ const equalButton = document.getElementById("equal-button");
 const clearButton = document.getElementById("clear-button");
 
 // Arrays for number storage and other variables:
-
 let displayBoard = [];
 let firstNumber, operator, secondNumber;
 let locked = false;
 
 // Calculator function:
-
 function calculate(a, op, b) {
   switch (op) {
     case "+":
@@ -28,7 +25,6 @@ function calculate(a, op, b) {
 }
 
 // Click Handling Function for numbers:
-
 numberButtons.forEach((numberButton) =>
   numberButton.addEventListener("click", (event) => {
     const clickedNumber = event.target.dataset.number;
@@ -38,7 +34,6 @@ numberButtons.forEach((numberButton) =>
 );
 
 // Click Handling Function for operators:
-
 operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
     if (locked === false) {
@@ -62,7 +57,6 @@ equalButton.addEventListener("click", () => {
 });
 
 // Clear button functionality:
-
 clearButton.addEventListener("click", () => {
   displayBoard = [];
   locked = false;
