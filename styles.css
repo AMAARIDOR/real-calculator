@@ -15,6 +15,11 @@
   text-align: end;
 }
 
+#numbers-and-operators {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 /* #numbers {
   display: grid;
   width: 75%;
@@ -31,6 +36,6 @@
   grid-column-end: span 3;
 } */
 
-#equal-and-clear-buttons {
+/* #equal-and-clear-buttons {
   display: flex;
-}
+} */
