@@ -19,6 +19,7 @@ body {
   padding: 10px;
   border-radius: 25px;
   background-color: #222532;
+  box-shadow: 2px 2px 25px #16171f;
 }
 
 #calculator-display {
