@@ -4,17 +4,30 @@
   font-size: 30px;
 }
 
+body {
+  background-color: #1b1d27
+}
+
 #calculator {
-  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
   height: 600px;
-  margin: auto;
-  border: 1px solid black;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #222532;
 }
 
 #calculator-display {
-  height: 100px;
+  padding: 20px 10px;
   text-align: end;
   font-size: 50px;
+  background-color: #222532;
+  color: white;
+  
 }
 
 #numbers-and-operators {
@@ -51,9 +64,20 @@
 [data-operator="clear"] {
   color: white;
   font-weight: 100;
+  border-radius: 0 0 0 25px;
 }
 
 [data-operator="equal"] {
   background-color: #febb00;
   color: white;
+  border-radius: 0 0 25px 0;
 }
+
+[data-number="1"] {
+  border-radius: 25px 0 0;
+}
+
+[data-operator="add"] {
+  border-radius: 0 25px 0 0 ;
+}
+
