@@ -15,7 +15,7 @@
   text-align: end;
 }
 
-#numbers {
+/* #numbers {
   display: grid;
   width: 75%;
   grid-template-columns: auto auto auto;
@@ -24,11 +24,12 @@
 #operators {
   display: flex;
   flex-direction: column;
+  width: 25%;
 }
 
 [data-number="0"] {
   grid-column-end: span 3;
-}
+} */
 
 #equal-and-clear-buttons {
   display: flex;
