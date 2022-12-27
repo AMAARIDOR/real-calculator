@@ -14,6 +14,7 @@
 #calculator-display {
   height: 100px;
   text-align: end;
+  font-size: 50px;
 }
 
 #numbers-and-operators {
@@ -27,7 +28,7 @@
 }
 
 .number-button {
-  font-weight: 100;
+  font-weight: 400;
   color: white;
   background-color: #2b2c41;
 }
@@ -35,6 +36,7 @@
 .operator-button {
   background-color: #343748;
   color: #febb00;
+  font-weight: 100;
 }
 
 [data-number="0"] {
@@ -48,6 +50,7 @@
 
 [data-operator="clear"] {
   color: white;
+  font-weight: 100;
 }
 
 [data-operator="equal"] {

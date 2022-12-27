@@ -1,3 +1,5 @@
+"use strict";
+
 // Elements Selection for DRY Principle:
 const calculatorDisplay = document.getElementById("calculator-display");
 const numberButtons = document.querySelectorAll(".number-button");
@@ -38,6 +40,7 @@ operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
     if (locked === false) {
       operator = event.target.innerHTML;
+      console.log(operator);
       calculatorDisplay.textContent += operator;
       firstNumber = displayBoard.join("");
       displayBoard = [];
