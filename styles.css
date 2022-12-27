@@ -17,25 +17,14 @@
 
 #numbers-and-operators {
   display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-/* #numbers {
-  display: grid;
-  width: 75%;
-  grid-template-columns: auto auto auto;
-}
-
-#operators {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
+  grid-template-columns: auto auto auto auto;
 }
 
 [data-number="0"] {
   grid-column-end: span 3;
-} */
+}
 
-/* #equal-and-clear-buttons {
-  display: flex;
-} */
+[data-operator="clear"],
+[data-operator="equal"] {
+  grid-column-start: span 2;
+}
