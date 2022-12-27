@@ -1,7 +1,7 @@
 * {
   text-align: center;
-  font-family: "Unbounded", cursive;
-  font-size: 45px;
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
 }
 
 #calculator {
@@ -19,6 +19,22 @@
 #numbers-and-operators {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+}
+
+.buttons {
+  border: #222532 solid 1px;
+}
+
+.number-button {
+  font-weight: 100;
+  color: white;
+  background-color: #2b2c41;
+}
+
+.operator-button {
+  background-color: #343748;
+  color: #febb00;
 }
 
 [data-number="0"] {
@@ -28,4 +44,13 @@
 [data-operator="clear"],
 [data-operator="equal"] {
   grid-column-start: span 2;
+}
+
+[data-operator="clear"] {
+  color: white;
+}
+
+[data-operator="equal"] {
+  background-color: #febb00;
+  color: white;
 }
