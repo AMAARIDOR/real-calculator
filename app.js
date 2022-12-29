@@ -40,7 +40,6 @@ operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
     if (locked === false) {
       operator = event.target.innerHTML;
-      console.log(operator);
       calculatorDisplay.textContent += operator;
       firstNumber = displayBoard.join("");
       displayBoard = [];
