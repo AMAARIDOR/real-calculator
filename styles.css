@@ -14,7 +14,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 600px;
+  height: 625px;
   margin: 0 auto;
   padding: 10px;
   border-radius: 25px;
@@ -23,13 +23,24 @@ body {
 }
 
 #calculator-display {
-  height: 50px;
+  height: 80px;
   padding: 20px 10px;
   text-align: end;
   font-size: 50px;
   background-color: #222532;
   color: white;
+  overflow-x: scroll;
   
+}
+
+::-webkit-scrollbar {
+  background-color: #222532;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2b2c41;
+  border-radius: 20px;
 }
 
 #numbers-and-operators {
