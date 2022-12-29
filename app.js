@@ -7,6 +7,13 @@ const operatorButtons = document.querySelectorAll(".operator-button");
 const equalButton = document.getElementById("equal-button");
 const clearButton = document.getElementById("clear-button");
 
+// ********** REFACTOR MULTIPLE NUMBERS ************
+// evalBoard will store the displayBoard values and after joining them using "".
+// There will be no firstNumber and secondNumber, only operator and evalBoard.
+// Calculate function will have eval() in it and will take the evalBoarda as inputs.
+// Operator wouldn't be locked after entering the second number, only when used in multiple amounts at the same time will it be locked.
+// ************** PREDICTIONS OVER *****************
+
 // Arrays for number storage and other variables:
 let displayBoard = [];
 let firstNumber, operator, secondNumber;
