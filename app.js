@@ -22,17 +22,19 @@ let evalBoard = "";
 let locked = false;
 
 // Calculator function:
-function calculate(a, op, b) {
-  switch (op) {
-    case "+":
-      return a + b;
-    case "-":
-      return a - b;
-    case "*":
-      return a * b;
-    case "/":
-      return a / b;
-  }
+function calculate(calculationString) {
+  // switch (op) {
+  //   case "+":
+  //     return a + b;
+  //   case "-":
+  //     return a - b;
+  //   case "*":
+  //     return a * b;
+  //   case "/":
+  //     return a / b;
+  // }
+  let result = eval(calculationString);
+  return result;
 }
 
 // Click Handling Function for numbers:
@@ -62,12 +64,13 @@ operatorButtons.forEach((operatorButton) =>
 
 // Equal button functionality:
 equalButton.addEventListener("click", () => {
-  secondNumber = displayBoard.join("");
-  calculatorDisplay.textContent = `= ${calculate(
-    Number(firstNumber),
-    operator,
-    Number(secondNumber)
-  )}`;
+  calculatorDisplay.textContent = `= ${calculate(evalBoard)}`;
+  // secondNumber = displayBoard.join("");
+  // calculatorDisplay.textContent = `= ${calculate(
+  //   Number(firstNumber),
+  //   operator,
+  //   Number(secondNumber)
+  // )}`;
 });
 
 // Clear button functionality:
