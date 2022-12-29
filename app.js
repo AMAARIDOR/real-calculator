@@ -75,7 +75,8 @@ equalButton.addEventListener("click", () => {
 
 // Clear button functionality:
 clearButton.addEventListener("click", () => {
-  displayBoard = [];
+  // displayBoard = [];
   locked = false;
-  firstNumber = secondNumber = calculatorDisplay.textContent = "";
+  evalBoard = calculatorDisplay.textContent = "";
+  // firstNumber = secondNumber = calculatorDisplay.textContent = "";
 });
