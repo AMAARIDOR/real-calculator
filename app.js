@@ -8,6 +8,7 @@ const equalButton = document.getElementById("equal-button");
 const clearButton = document.getElementById("clear-button");
 
 // ********** REFACTOR MULTIPLE NUMBERS ************
+// displayBoard will no longer exist.
 // evalBoard will store the displayBoard values and after joining them using "".
 // There will be no firstNumber and secondNumber, only operator and evalBoard.
 // Calculate function will have eval() in it and will take the evalBoarda as inputs.
@@ -15,8 +16,9 @@ const clearButton = document.getElementById("clear-button");
 // ************** PREDICTIONS OVER *****************
 
 // Arrays for number storage and other variables:
-let displayBoard = [];
-let firstNumber, operator, secondNumber;
+// let displayBoard = [];
+let operator;
+let evalBoard = "";
 let locked = false;
 
 // Calculator function:
@@ -37,8 +39,10 @@ function calculate(a, op, b) {
 numberButtons.forEach((numberButton) =>
   numberButton.addEventListener("click", (event) => {
     const clickedNumber = event.target.dataset.number;
-    displayBoard.push(clickedNumber);
-    calculatorDisplay.textContent += clickedNumber;
+    evalBoard += clickedNumber;
+    console.log(evalBoard);
+    // displayBoard.push(clickedNumber);
+    calculatorDisplay.textContent = evalBoard;
   })
 );
 
@@ -47,9 +51,10 @@ operatorButtons.forEach((operatorButton) =>
   operatorButton.addEventListener("click", (event) => {
     if (locked === false) {
       operator = event.target.innerHTML;
-      calculatorDisplay.textContent += operator;
-      firstNumber = displayBoard.join("");
-      displayBoard = [];
+      evalBoard += operator;
+      calculatorDisplay.textContent = evalBoard;
+      // firstNumber = displayBoard.join("");
+      // displayBoard = [];
       locked = true;
     }
   })
